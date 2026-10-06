@@ -1,55 +1,57 @@
-# KdAndrade.github.io
+# Kauan Andrade — Backend Portfolio
 
-Personal portfolio — Kauan de Andrade Oliveira
+Portfólio estático com HTML, CSS e JavaScript, sem dependências ou etapa de build.
 
-Static portfolio built with vanilla HTML, CSS, and JavaScript. No build tools or dependencies required.
+## Publicar no GitHub Pages
 
-## 📋 Structure
+1. Extraia este ZIP.
+2. Coloque o conteúdo da pasta `kauan-backend-github` na raiz do repositório. O `index.html` deve ficar na raiz, junto às pastas `css/` e `js/`.
+3. Faça commit e push para a branch usada na publicação.
+4. No GitHub, abra **Settings → Pages**.
+5. Em **Build and deployment**, escolha **Deploy from a branch**.
+6. Selecione a branch de publicação (por exemplo, `main`) e a pasta **/(root)**. Clique em **Save**.
 
-- `index.html` — Main portfolio page
-- `css/styles.css` — Styling with dark/light theme support
-- `js/` — JavaScript modules for interactivity and i18n
-  - `main.js` — Entry point and section rendering
-  - `theme.js` — Theme switcher logic
-  - `i18n.js` — Internationalization (en-US, pt-BR)
-  - `sections/` — Content modules for each section
-  - `data/` — Projects list and translations
+Os links canonical e Open Graph estão configurados para `https://kdandrade.github.io/`. Se usar outro repositório ou domínio, altere ambos no `index.html` para a URL real.
 
-## 🚀 Published on GitHub Pages
+## Testar localmente
 
-The portfolio is deployed directly from the root of this repository.
-- **URL**: https://kdandrade.github.io/
-- **Branch**: main
-- **Source**: /(root)
+Na pasta do projeto, execute:
 
-## 🎨 Features
-
-- **Dark & Light themes** — Auto-detect system preference, manual override saved
-- **Internationalization** — English (en-US) and Brazilian Portuguese (pt-BR)
-- **Accessible** — Semantic HTML, ARIA labels, keyboard navigation
-- **Responsive** — Mobile-first design with smooth scrolling
-- **No external dependencies** — Pure HTML, CSS, and vanilla JavaScript
-
-## 🛠️ Local Development
-
-Start a local HTTP server:
-
-```bash
+```sh
 python -m http.server 8080
-# or
-npx http-server
 ```
 
-Then open http://localhost:8080
+Abra http://localhost:8080. Você também pode usar o Live Server do VS Code. Abrir o HTML diretamente pelo explorador de arquivos não carrega corretamente os módulos JavaScript.
 
-## ✏️ Editing Content
+## Editar
 
-- **Projects**: Edit `js/data/projects.js`
-- **Sections**: Modify files in `js/sections/`
-- **Styling**: Update `css/styles.css`
-- **Translations**: Add entries to `js/data/translations.js`
-- **Theme tokens**: Adjust CSS variables in `css/styles.css`
+- `index.html`: título, metadados, navegação, hero e rodapé.
+- `css/styles.css`: tokens de design, estilos e responsividade.
+- `js/data/projects.js`: projetos e links de contato.
+- `js/sections/`: conteúdo de cada seção.
+- `js/main.js`: renderização e menu mobile.
 
-## 📝 License
+LinkedIn e e-mail já estão configurados em `js/data/projects.js`. Adicione novos projetos ao array `projects`, utilizando apenas informações confirmadas.
 
-See LICENSE file.
+Nenhum formulário ou backend é necessário para o portfólio. As informações de projetos são estáticas; não existe integração com estatísticas do GitHub.
+
+## Idiomas
+
+O seletor na navegação alterna entre `en-US` (inglês americano) e `pt-BR` (português brasileiro). A primeira visita utiliza o idioma do navegador; outros idiomas usam inglês. A escolha é persistida em `localStorage`, quando disponível.
+
+- `js/i18n.js`: inicialização e função `setLanguage(locale)`.
+- `js/data/translations.js`: traduções em português das strings originais em inglês.
+
+Para novas frases, adicione uma entrada ao dicionário `ptBR`, mantendo o texto inglês exatamente igual ao utilizado no componente. Nomes de tecnologias, comandos e repositórios permanecem como termos técnicos. A tradução acontece no navegador; o HTML original entregue a mecanismos de busca continua em inglês.
+
+## Modo claro e escuro
+
+O seletor de tema permanece acessível junto ao idioma. Na primeira visita, acompanha a preferência de cores do sistema. Uma escolha manual fica salva separadamente do idioma e tem prioridade. Se o armazenamento estiver bloqueado, o seletor continua funcionando durante a visita.
+
+- `js/theme-init.js`: aplica o tema antes do carregamento dos estilos para evitar flashes.
+- `js/theme.js`: `setTheme('light')`, `setTheme('dark')` e persistência da escolha.
+- `css/styles.css`: tokens dos temas e contraste dos elementos.
+
+## Formatação
+
+HTML, CSS e JavaScript seguem indentação de dois espaços. A configuração `.prettierrc.json` mantém aspas simples em JavaScript, ponto e vírgula e largura preferencial de 100 caracteres. Para preservar esse padrão, use a extensão Prettier no editor.
