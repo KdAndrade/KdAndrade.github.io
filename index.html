@@ -1,20 +1,161 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="refresh" content="0; url=./kauan-backend-github/kauan-backend-github/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Redirecting to portfolio</title>
+    <title>Kauan Andrade | Backend Developer</title>
     <meta
       name="description"
-      content="Redirecting to the GitHub Pages portfolio site for Kauan de Andrade Oliveira."
+      content="Backend Developer focused on Java, Spring Boot, Python, REST APIs and relational databases."
     />
+    <meta name="theme-color" content="#111412" />
+    <link rel="canonical" href="https://kdandrade.github.io/" />
+    <meta property="og:title" content="Kauan Andrade | Backend Developer" />
+    <meta
+      property="og:description"
+      content="Backend applications, REST APIs and relational databases. Explore my projects and engineering approach."
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kdandrade.github.io/" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23111412'/%3E%3Ctext x='4' y='23' fill='%2395de64' font-family='monospace' font-size='20' font-weight='bold'%3EKA%3C/text%3E%3C/svg%3E"
+    />
+    <script src="./js/theme-init.js"></script>
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <p>Redirecting to the portfolio...</p>
-    <p>
-      If you are not redirected automatically, open
-      <a href="./kauan-backend-github/kauan-backend-github/">this link</a>.
-    </p>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="header">
+      <nav class="container nav" aria-label="Main navigation">
+        <a href="#home" class="brand" aria-label="Kauan Andrade home">
+          KA
+          <span>.</span>
+        </a>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">
+          Menu
+          <span aria-hidden="true">+</span>
+        </button>
+        <div id="nav-links" class="nav-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#stack">Stack</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="theme-control">
+          <label for="theme-select" class="sr-only">Theme</label>
+          <select id="theme-select" aria-label="Change theme">
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
+          </select>
+        </div>
+        <div class="language-control">
+          <label for="language-select" class="sr-only">Language</label>
+          <select id="language-select" aria-label="Change language">
+            <option value="en-US">EN-US</option>
+            <option value="pt-BR">PT-BR</option>
+          </select>
+        </div>
+      </nav>
+    </header>
+    <main id="main">
+      <section id="home" class="hero container">
+        <div class="hero-copy">
+          <p class="command">
+            <span>$</span>
+            whoami
+          </p>
+          <p class="name">Kauan Andrade</p>
+          <h1>
+            Backend
+            <br />
+            <span>
+              Developer
+              <span class="cursor" aria-hidden="true">_</span>
+            </span>
+          </h1>
+          <p class="hero-description">
+            Building backend applications, REST APIs and data-driven systems with Java, Spring Boot
+            and Python.
+          </p>
+          <p class="hero-stack mono">
+            Java
+            <i>·</i>
+            Spring Boot
+            <i>·</i>
+            Python
+            <i>·</i>
+            PostgreSQL
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#projects">View projects</a>
+            <a
+              class="text-link"
+              href="https://github.com/KdAndrade"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+            <a
+              class="text-link"
+              href="https://www.linkedin.com/in/kauan-de-andrade-oliveira-a20738275"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+            <a class="text-link" href="#contact">Contact</a>
+          </div>
+        </div>
+        <aside class="hero-aside" aria-label="Development focus">
+          <div class="code-title mono">
+            <span>developer.json</span>
+            <span aria-hidden="true">{ }</span>
+          </div>
+          <pre><code><span class="muted">{</span>
+  <span class="code-key">"name"</span>: <span class="code-value">"Kauan Andrade"</span>,
+  <span class="code-key">"focus"</span>: <span class="code-value">"backend"</span>,
+  <span class="code-key">"building"</span>: [
+    <span class="code-value">"REST APIs"</span>,
+    <span class="code-value">"business logic"</span>,
+    <span class="code-value">"relational data"</span>
+  ]
+<span class="muted">}</span></code></pre>
+          <p class="aside-note mono">// the work behind the interface.</p>
+        </aside>
+        <div class="hero-bottom mono">
+          <span>Based in Minas Gerais, Brazil</span>
+          <span>
+            Scroll to explore
+            <span aria-hidden="true">↓</span>
+          </span>
+        </div>
+      </section>
+      <div id="sections"></div>
+      <noscript>
+        <section class="container section">
+          <h2>Projects & contact</h2>
+          <p>
+            I build backends with Java, Spring Boot and Python. Explore Zelar.app and Oriento on
+            <a href="https://github.com/KdAndrade">my GitHub profile</a>
+            .
+          </p>
+          <p>Enable JavaScript to see the full project case studies.</p>
+        </section>
+      </noscript>
+    </main>
+    <footer class="container footer">
+      <a href="#home" class="brand">
+        KA
+        <span>.</span>
+      </a>
+      <span>Kauan Andrade · Backend Developer</span>
+      <a href="#home">Back to top</a>
+    </footer>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
